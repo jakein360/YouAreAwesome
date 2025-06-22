@@ -15,7 +15,7 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundStyle(.mint)
-            Text("Commitment")
+            Text("Effort")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundStyle(.mint)
