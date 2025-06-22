@@ -11,7 +11,11 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            Text("Million Dollar Road")
+            Text("Relentless")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundStyle(.mint)
+            Text("Commitment")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundStyle(.mint)
