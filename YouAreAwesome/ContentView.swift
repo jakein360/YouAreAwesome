@@ -17,10 +17,11 @@ struct ContentView: View {
             
             Spacer()
             
-            Image(systemName: imageName)
+          Image(imageName)
                 .resizable()
                 .scaledToFit()
-                .foregroundStyle(.orange)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .shadow(radius: 20)
                 .padding(20)
             Text(message)
                 .font(.largeTitle)
@@ -33,10 +34,10 @@ struct ContentView: View {
             Button("Press Me!") {
                 let message1 = "You are awesome!"
                 let message2 = "You are Great!"
-                let imageOne = "sun.max.fill"
-                let imageTwo = "hand.thumbsup"
+//                let imageOne = "sun.max.fill"
+//                let imageTwo = "hand.thumbsup"
                 
-                imageName = (imageName == imageOne ? imageTwo : imageOne)
+                imageName = (imageName == "image0" ? "image1" : "image0")
                 message = (message == message1 ? message2 : message1)
             }
             .buttonStyle(.borderedProminent)
