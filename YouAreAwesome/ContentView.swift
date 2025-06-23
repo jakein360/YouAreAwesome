@@ -16,7 +16,7 @@ struct ContentView: View {
         VStack {
             
             Spacer()
-          
+            
             Image(systemName: imageName)
                 .resizable()
                 .scaledToFit()
@@ -28,28 +28,27 @@ struct ContentView: View {
                 .foregroundStyle(.mint)
             
             Spacer()
-        
-            HStack {
-                Button("Press Me!") {
-                    if imageName == "" {
-                        imageName = "sun.max.fill"
-                        message = "You are awesome!"
-                    }else if imageName == "sun.max.fill" {
-                        imageName = "hand.thumbsup"
-                        message = "You are Great!"
-                    } else if imageName == "hand.thumbsup"{
-                        imageName = "sun.max.fill"
-                        message = "You are awesome!"
-                    }
-                  
+            
+            
+            Button("Press Me!") {
+                let message1 = "You are awesome!"
+                let message2 = "You are Great!"
+                let imageOne = "sun.max.fill"
+                let imageTwo = "hand.thumbsup"
+                
+                if imageName == imageOne {
+                    imageName = imageTwo
+                    message = message2
+                } else {
+                    imageName = imageOne
+                    message = message1
                 }
                 
-              
             }
             .buttonStyle(.borderedProminent)
             .font(.title2)
             .tint(.orange)
-                
+            
         }
         
     }
