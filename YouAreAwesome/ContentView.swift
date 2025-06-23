@@ -8,42 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var message = "This is Cool!"
+    @State private var message = "I Am A Programmer!"
+    @State private var message1 = "Awesome!"
+    @State private var message2 = "Great!"
+    
     var body: some View {
         
         VStack {
-            Text("Relentless")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundStyle(.mint)
-            Text("Effort")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundStyle(.mint)
+            
+            Spacer()
+          
             Image(systemName: "swift")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.orange)
-            Text("Have You")
+                .frame(width: 200, height: 200)
+            Text(message)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundStyle(.mint)
-            Text("Built Anything")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundStyle(.mint)
-            Text("Cool Today?")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundStyle(.mint)
-            Button(message) {
-                message = "You Clicked Me!"
-                
-            }
             
+            Spacer()
+        
+            HStack {
+                Button(message1) {
+                    message = message1
+                }
+                Button(message2){
+                    message = message2
+                }
+              
+            }
+            .buttonStyle(.borderedProminent)
+            .font(.title2)
+            .tint(.orange)
                 
         }
-        .padding()
         
     }
 }
